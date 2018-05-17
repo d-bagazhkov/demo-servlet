@@ -14,13 +14,22 @@
     <tr>
         <th>Name</th>
         <th>Desctiption</th>
+        <th>/</th>
+        <th>X</th>
     </tr>
-    <c:forEach items="product" var="products">
+    <c:forEach items="${products}" var="product">
     <tr>
-        <td>${product.name}</td>
-        <td>${product.description}</td>
+        <td><c:out value="${product.name}" /></td>
+        <td><c:out value="${product.description}" /></td>
+        <td><a href="<c:url value="/edit-product/${product.id}" />">Edit</a></td>
+        <td><a href="<c:url value="/delete-product/${product.id}" />">Delete</a></td>
     </tr>
     </c:forEach>
+    <tr>
+        <td colspan="4" align="center">
+            <a href="<c:url value="/create-product" />">Create</a>
+        </td>
+    </tr>
 </table>
 </body>
 </html>

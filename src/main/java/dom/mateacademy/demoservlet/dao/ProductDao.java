@@ -32,7 +32,7 @@ public class ProductDao {
                 Product product = new Product(
                         resultSet.getInt("id"),
                         resultSet.getString("name"),
-                        resultSet.getString("desription")
+                        resultSet.getString("description")
                 );
                 products.add(product);
             }

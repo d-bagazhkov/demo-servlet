@@ -9,5 +9,6 @@
 <h2>Create new product</h2>
 <br />
 <c:import url="nav.jsp" />
+
 </body>
 </html>
