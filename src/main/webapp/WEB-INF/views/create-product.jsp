@@ -9,6 +9,10 @@
 <h2>Create new product</h2>
 <br />
 <c:import url="nav.jsp" />
-
+<form action="/create-product" method="POST" name="product">
+    <lablel>Name product</lablel><input type="text" name="name" /><br />
+    <lablel>Description</lablel><input type="text" name="description" /><br />
+    <input type="submit" value="Submit" />
+</form>
 </body>
 </html>

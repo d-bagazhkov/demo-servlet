@@ -13,7 +13,8 @@
 <table>
     <tr>
         <th>Name</th>
-        <th>Desctiption</th>
+        <th>Description</th>
+        <th>*</th>
         <th>/</th>
         <th>X</th>
     </tr>
@@ -21,8 +22,9 @@
     <tr>
         <td><c:out value="${product.name}" /></td>
         <td><c:out value="${product.description}" /></td>
-        <td><a href="<c:url value="/edit-product/${product.id}" />">Edit</a></td>
-        <td><a href="<c:url value="/delete-product/${product.id}" />">Delete</a></td>
+        <td><a href="<c:url value="/details?id=${product.id}" />">Details</a></td>
+        <td><a href="<c:url value="/edit?id=${product.id}" />">Edit</a></td>
+        <td><a href="<c:url value="/delete?id=${product.id}" />">Delete</a></td>
     </tr>
     </c:forEach>
     <tr>

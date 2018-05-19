@@ -44,4 +44,32 @@ public class ProductDao {
     }
 
 
+    public Product findProductById(int id) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM products WHERE id = ?");
+        preparedStatement.setInt(1, id);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        Product product = new Product(
+                resultSet.getInt("id"),
+                resultSet.getString("name"),
+                resultSet.getString("description")
+        );
+        return product;
+    }
+
+    public void editProduct(Product product) throws SQLException{
+        PreparedStatement preparedStatement = connection
+                .prepareStatement("UPDATE products SET name=?, description=? WHERE id= ?");
+        preparedStatement.setString(1, product.getName());
+        preparedStatement.setString(2, product.getDescription());
+        preparedStatement.setInt(3, product.getId());
+        preparedStatement.executeUpdate();
+    }
+
+    public void deleteProduct(int id) throws SQLException {
+        PreparedStatement preparedStatement = connection
+                .prepareStatement("DELETE products WHERE id= ?");
+        preparedStatement.setInt(1, id);
+        preparedStatement.executeUpdate();
+    }
 }

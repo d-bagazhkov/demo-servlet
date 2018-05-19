@@ -7,31 +7,58 @@
     <display-name>Home</display-name>
 
     <servlet>
-        <servlet-name>homeServlet</servlet-name>
+        <servlet-name>HomeServlet</servlet-name>
         <servlet-class>dom.mateacademy.demoservlet.controller.HomeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>homeServlet</servlet-name>
+        <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>viewAllServlet</servlet-name>
+        <servlet-name>ViewAllServlet</servlet-name>
         <servlet-class>dom.mateacademy.demoservlet.controller.ViewAllServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>viewAllServlet</servlet-name>
+        <servlet-name>ViewAllServlet</servlet-name>
         <url-pattern>/view-all</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
-        <servlet-name>createNewProductServlet</servlet-name>
+        <servlet-name>CreateNewProductServlet</servlet-name>
         <servlet-class>dom.mateacademy.demoservlet.controller.CreateNewProductServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>createNewProductServlet</servlet-name>
+        <servlet-name>CreateNewProductServlet</servlet-name>
         <url-pattern>/create-product</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditProductServlet</servlet-name>
+        <servlet-class>dom.mateacademy.demoservlet.controller.EditProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditProductServlet</servlet-name>
+        <url-pattern>/edit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>dom.mateacademy.demoservlet.controller.DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewOneServlet</servlet-name>
+        <servlet-class>dom.mateacademy.demoservlet.controller.ViewOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewOneServlet</servlet-name>
+        <url-pattern>/details</url-pattern>
     </servlet-mapping>
 
 </web-app>

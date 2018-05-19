@@ -1,2 +1,3 @@
+DROP TABLE products;
 CREATE TABLE IF NOT EXISTS products (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), description VARCHAR(255));
 INSERT INTO products (name, description) VALUES ('TEST NAME', 'TEST DESCRiPTION');
